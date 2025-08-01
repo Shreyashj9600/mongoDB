@@ -1,0 +1,9 @@
+{
+    "_comment": " Aggregate Framework",
+    "comment": "syntax of group"
+}
+
+db.cars.aggregate([
+    {$group:{_id:"$maker"}}
+])
+
