@@ -1,0 +1,41 @@
+db.cars.find(
+    {
+            $and: [
+        {
+            "fuel_type": "Diesel"
+        },
+        {
+            "engine.type": "Turbocharged"
+        },
+        {
+            "sunroof": true
+        }
+    ]
+}
+)
+                                                                                                    
+db.cars.find(
+    {
+            $or: [
+        {
+            "fuel_type": "Diesel"
+        },
+        {
+            "engine.type": "Turbocharged"
+        }
+    ]
+}
+)
+
+db.cars.find(
+    {
+            $nor: [
+        {
+            "fuel_type": "Diesel"
+        },
+        {
+            "engine.type": "Turbocharged"
+        }
+    ]
+}
+)
